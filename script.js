@@ -36,11 +36,10 @@ function oneRound(playerSelection, computerSelection) {
                 alert("You win the game!");
                 const restart = document.createElement("button");
                 restart.textContent = "Play again!";
-                const linkRestart = document.createElement("a");
-                document.body.appendChild(linkRestart);
-                linkRestart.appendChild(restart);
-                linkRestart.setAttribute("href", "http://127.0.0.1:5500/index.html");
-                linkRestart.setAttribute("target", "_self");  
+                document.body.appendChild(restart);
+                restart.addEventListener("click", () => {
+                    window.location.reload();
+                })
             }
         }
         else {
@@ -50,12 +49,10 @@ function oneRound(playerSelection, computerSelection) {
                 alert("The computer wins the game :-(");
                 const restart = document.createElement("button");
                 restart.textContent = "Play again!";
-                const linkRestart = document.createElement("a");
-                document.body.appendChild(linkRestart);
-                restart.setAttribute("id", "restartButton");
-                linkRestart.appendChild(restart);
-                linkRestart.setAttribute("href", "http://127.0.0.1:5500/index.html");
-                linkRestart.setAttribute("target", "_self");
+                document.body.appendChild(restart);
+                restart.addEventListener("click", () => {
+                    window.location.reload();
+                })
             }
         }
     }
