@@ -1,19 +1,35 @@
 #userSelection {
     display: flex;
     direction: row;
-    align-items: center;
+    justify-content: center;
+}
+
+img {
+    margin-top: 4%;
+    margin-bottom: 5%;
+    display: block;
+    max-width: calc(45%/3);
+    cursor: pointer;
+}
+
+#rock {
+    margin-right: 6%;
+}
+
+#scissors {
+    margin-left: 6%;
+}
+
+p {
+    margin-bottom: 1%;
+    margin-left: 2%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 button {
     cursor: pointer;
-}
-
-#userSelection button {
-    margin-top: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    flex-grow: 1;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 3%;
+    margin-left: 2%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: rgb(170, 211, 207);
+    border-radius: 5px;
 }
