@@ -17,7 +17,7 @@ let tieNumber = 0;
 
 function oneRound(playerSelection, computerSelection) {
     if (humanNumber === 5 || computerNumber === 5) {
-        alert(`The game is over`);
+        alert(`The game is over, the result is \nYOU: ${humanNumber}\nCOMPUTER: ${computerNumber}\nPress the "Play again!" button to play another 5 rounds game`);
     }
     else {
         if (playerSelection === computerSelection) {
@@ -54,9 +54,9 @@ function oneRound(playerSelection, computerSelection) {
 }    
 
 
-const buttons = document.querySelectorAll('button');
+const responsiveImgs = document.querySelectorAll('img');
 
-buttons.forEach((button) => {
-    button.addEventListener('click', () => 
-        oneRound(button.id, computerPlay()));
+responsiveImgs.forEach((img) => {
+    img.addEventListener('click', () => 
+        oneRound(img.id, computerPlay()));
 });
